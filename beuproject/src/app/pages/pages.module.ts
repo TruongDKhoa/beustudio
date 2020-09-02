@@ -8,7 +8,14 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { SignInComponent } from './landing/sign-in/sign-in.component';
 import { SignUpComponent } from './landing/sign-up/sign-up.component';
-import { SharedModule } from '../shared/shared.module';
+import { CommonModules } from '../shared/common/common.module';
+
+import {DataViewModule} from 'primeng/dataview';
+import {ButtonModule} from 'primeng/button';
+import {PanelModule} from 'primeng/panel';
+import {DropdownModule} from 'primeng/dropdown';
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
 
 const appRoutes: Routes = [
      {
@@ -33,7 +40,12 @@ const appRoutes: Routes = [
   ],
   imports: [
      BrowserModule,
-     SharedModule,
+     CommonModules,
+     DataViewModule,
+     ButtonModule,
+     PanelModule,
+     DropdownModule,
+     InputTextModule,
      RouterModule.forRoot(appRoutes)
   ],
      providers: [],

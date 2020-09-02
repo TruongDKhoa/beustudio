@@ -1,1 +1,17 @@
-<p>header works!</p>
+<div class="row d-flex justify-content-between">
+     <div class="row col-7">
+         <div class="col-3 logo d-flex align-items-center justify-content-center pr-0">
+             BEU Studio
+         </div>
+         <div class="col-9 d-flex align-items-center pl-0">
+             <p-tabMenu [model]="items" [activeItem]="items[0]">
+             </p-tabMenu>
+         </div>
+     </div>
+ 
+     <div class="col-5 d-flex align-items-center justify-content-end">
+         <button class="btn btn-purple" type="button" (click)="redirectLogin()" 
+         [style]="{width:'130px', height: '40px'}"><b>Login</b></button>   
+     </div>
+ </div>
+ 

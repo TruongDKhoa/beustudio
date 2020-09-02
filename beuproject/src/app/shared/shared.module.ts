@@ -8,6 +8,10 @@ import { CommonModules } from './common/common.module';
     CommonModule,
     CommonModules
   ],
+  exports: [
+     CommonModule,
+     CommonModules
+  ],
   providers: [],
 })
 export class SharedModule { }
