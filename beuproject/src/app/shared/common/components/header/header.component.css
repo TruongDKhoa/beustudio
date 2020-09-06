@@ -1,0 +1,13 @@
+:host::ng-deep .p-tabmenu {
+  width: fit-content !important;
+}
+
+.logo {
+  font-size: 18pt;
+  color: #9C27B0;
+  font-weight: bold;
+}
+
+/* .header {
+  background-color: #7b7b7b;
+} */

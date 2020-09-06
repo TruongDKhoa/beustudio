@@ -1,1 +1,71 @@
-<p>product-l jnjlkjlkjlkjworks!</p>
+
+
+<p-dataView #dv [value]="products" [paginator]="true" [rows]="9" paginatorPosition="both" filterBy="title"
+[sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+<p-header>
+    <div class="ui-helper-clearfix">
+        <div class="p-grid">
+            <!-- <div class="p-col-2">
+                <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort by price" (onChange)="onSortChange($event)" [style]="{'min-width':'140px'}"></p-dropdown>
+            </div> -->
+            <!-- <div class="p-col-2">
+                <p-dropdown [options]="sortDistrict" [(ngModel)]="sortKey" placeholder="Quận" (onChange)="onSortDistrict($event)" [showClear]="true" [style]="{'min-width':'140px'}"></p-dropdown>
+            </div> -->
+            <div class="p-col-2 filter-container">
+                <div style="position:relative">
+                    <input type="search" pInputText placeholder="Tìm kiếm" (input)="dv.filter($event.target.value)">
+                </div>
+            </div>
+            <div class="p-col-3" style="text-align:right">
+                <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+            </div>
+        </div>
+    </div>
+</p-header>
+<ng-template let-product pTemplate="gridItem">
+    <div class="p-col-4 px-3 my-3">
+        <div class="card p-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{product.category}}</span>
+                </div>
+                <span class="product-badge {{product.inventoryStatus}} text-bold">{{ product.inventoryStatus }}</span>
+            </div>
+            <div class="product-img mt-2">
+                <img src="assets/images/product/{{product.image}}" alt="">
+            </div>
+            <div class="product-detail text-center">{{ product.name }}</div>
+            <div class="mb-3 text-center">{{ product.description }}</div>
+            <!-- <div class="text-center">
+                <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+            </div> -->
+            <div class="d-flex justify-content-between">
+                <span class="text-danger font-size-20pt my-2"><b>{{ product.price }} $</b></span>
+                <p-button icon="fa fa-shopping-cart" class="btn" type="button" (click)="selectProduct($event, product)"></p-button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template let-product pTemplate="listItem">
+    <div class="p-col-12">
+        <div class="product-details">
+            <div>
+                <div class="p-grid">
+                    <!-- <div class="p-col-12 ">Vin: <b>{{product.id}}</b></div>
+                    <div class="p-col-12">Year: <b>{{product.title}}</b></div>
+                    <div class="p-col-12">Brand: <b>{{product.price}}</b></div>
+                    <div class="p-col-12">Color: <b>{{product.intro}}</b></div> -->
+                </div>
+            </div>
+            <button pButton type="button" icon="pi pi-search" (click)="selectProduct($event, product)"></button>
+        </div>
+    </div>
+</ng-template>
+</p-dataView>
+<!-- 
+<p-dialog header="product Details" [(visible)]="displayDialog" [minY]="70" showEffect="fade" [modal]="true" 
+[style]="{width: '225px'}" (onAfterHide)="onDialogHide()" [contentStyle]="{padding: '2em', textAlign: 'center'}">
+<div *ngIf="selectedProduct">
+    <strong>{{selectedProduct.id}} - {{selectedProduct.title}}</strong>
+</div>
+</p-dialog> -->

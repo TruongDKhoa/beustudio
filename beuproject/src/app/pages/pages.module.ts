@@ -16,6 +16,7 @@ import {PanelModule} from 'primeng/panel';
 import {DropdownModule} from 'primeng/dropdown';
 import {DialogModule} from 'primeng/dialog';
 import {InputTextModule} from 'primeng/inputtext';
+import {RatingModule} from 'primeng/rating';
 
 const appRoutes: Routes = [
      {
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
      PanelModule,
      DropdownModule,
      InputTextModule,
+     RatingModule,
      RouterModule.forRoot(appRoutes)
   ],
      providers: [],
