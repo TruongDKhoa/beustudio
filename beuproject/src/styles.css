@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-purple {
+  background-color: #9C27B0 !important;
+  border: 1px solid #9C27B0 !important;
+  color: white;
+  /* padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15pt; */
+}
+
+.text-purple {
+  color:  #9C27B0 !important;
+}
+
+.product-badge {
+  border-radius: 2px;
+  padding: .25em .5rem;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .3px;
+}
+
+.INSTOCK {
+  background: #c8e6c9;
+  color: #256029;
+}
+
+.LOWSTOCK {
+  background: #feedaf;
+  color: #8a5340;
+}
+
+.OUTOFSTOCK {
+  background: #ffcdd2;
+  color: #c63737;
+}
+
+.product-category-icon {
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+.product-category {
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.card:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}

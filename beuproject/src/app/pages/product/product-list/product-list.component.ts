@@ -37,9 +37,9 @@ export class ProductListComponent implements OnInit {
 
     if (results) {
       results.subscribe(data => {
-        this.products = data;
+        this.products = data.data;
       });
-      console.log('1: ', this.products);
+      console.log('1: ', results);
     }
   }
 

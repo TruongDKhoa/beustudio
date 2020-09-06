@@ -12,7 +12,7 @@ export class ProductServices {
 
 
   public getProductList(): Observable<any> {
-    const data = this.http.get<any>('/assets/mock-data/product.json');
+    const data = this.http.get<any>('/assets/mock-data/products.json');
     data.subscribe(x => {
       console.log(x);
     });
